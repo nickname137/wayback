@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <title>Wayback Database</title>
+  <link rel="stylesheet" href="db.css" />
+
+</head>
+
+<body>
+
+  <div id="db-panel">
+
+    <h1>📂 WAYBACK DB</h1>
+
+    <!-- Controls -->
+    <div id="controls">
+
+      <select id="collectionFilter" title="select collection"></select>
+
+      <!-- Use Ctrl and F <input type="text" id="searchByTitle" placeholder="Search by title" /> -->
+           
+      <select id="statusSelect" title="select status of files to download them">
+            <option value="new">new</option>
+            <option value="interrupted">interrupted</option>
+            <option value="failed">failed</option>
+            <option value="notDownloaded">new, interrupted, failed</option>
+            <option value="start">start</option>
+            <option value="completed">completed</option>
+      </select>
+
+      <input type="text" id="formatInput" value="pdf" title="Enter file format. For example, pdf, jpg, torrent." placeholder="Enter file format" />
+
+      <button id="downloadCollection" title="press to download collection">Download Collection</button>
+      <button id="pauseDownloading" title="press to pause downloading">Pause Downloading</button>
+      <button id="deleteCollection" title="press to delete collection">Delete Collection</button>
+      <button id="clearDB" title="press to clear Database">Clear Database</button>
+
+    </div>
+
+    <!-- Results Table -->
+    <div id="results"></div>
+
+  </div>
+
+  <script src="db.js"></script>
+
+</body>
+
+</html>
+

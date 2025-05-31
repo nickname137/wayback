@@ -1,0 +1,227 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #111;
+  color: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#db-panel {
+  padding: 16px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+label {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Results Grid Container */
+#results {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Grid row (header + data) */
+.grid-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 2fr 1fr 3fr 3fr 2fr;
+  gap: 8px;
+  padding: 8px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+  align-items: flex-start;
+}
+
+/* Header row */
+.grid-row.header {
+  font-weight: bold;
+  background: #2c2c2c;
+  border-bottom: 2px solid #666;
+}
+
+/* Grid cell */
+.grid-cell {
+  color: #f0f0f0;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+/* Links */
+.grid-cell a {
+  color: #f4d03f;
+  text-decoration: none;
+}
+.grid-cell a:hover {
+  text-decoration: underline;
+}
+
+/* Textarea inside grid cell */
+.grid-cell textarea {
+  width: 100%;
+  background: #000;
+  color: #0f0;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 6px;
+  font-family: monospace;
+  font-size: 13px;
+  resize: vertical;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1a1a1a;
+}
+
+/* Webkit scrollbar styling */
+.grid-cell textarea::-webkit-scrollbar {
+  width: 10px;
+}
+.grid-cell textarea::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 5px;
+}
+.grid-cell textarea::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 5px;
+  border: 2px solid #1a1a1a;
+}
+.grid-cell textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+
+/* Controls container */
+.item-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Buttons and select inside controls */
+.item-controls button,
+.item-controls select {
+  background-color: #222;
+  color: #f0f0f0;
+  border: 1px solid #555;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.item-controls button:hover {
+  background-color: #444;
+}
+
+/* Control Panel Styles */
+/* Control Panel Styles */
+#controls {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+#controls input[type="text"],
+#controls select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #222;
+  color: #fff;
+  min-width: 200px;
+  appearance: none;
+  box-sizing: border-box;
+
+
+
+}
+
+#controls select {
+  height: 38px;
+  line-height: 1;
+}
+
+#controls button {
+  background-color: rgb(245, 245, 245);
+  color: #111;
+  font-weight: bold;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: #808b96;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+
+}
+
+#controls button:hover {
+  background-color: #0e7bb5;
+}
+
+
+.list-container {
+  white-space: pre-wrap;
+  font-family: monospace;
+  overflow-y: auto;
+  max-height: 6em;
+  border: 1px solid #ccc;
+  padding: 4px;
+}
+
+/* Webkit scrollbar styling for .list-container */
+.list-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.list-container::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 5px;
+}
+
+.list-container::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 5px;
+  border: 2px solid #1a1a1a;
+}
+
+.list-container::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+
+.list-container {
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1a1a1a;
+}
+
+/* Custom dropdown arrow for select boxes */
+/* Custom dropdown arrow for select boxes only */
+select#collectionFilter, select#statusSelect,
+.item-controls select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Cpolyline points='2,3 5,6 8,3' fill='none' stroke='gray' stroke-width='2' stroke-linecap='round' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+  padding-right: 30px;
+  appearance: none;
+}
+
+
+

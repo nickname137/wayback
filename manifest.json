@@ -1,0 +1,43 @@
+{
+    "manifest_version": 3,
+    "name": "Wayback",
+    "version": "1.0",
+    "description": "Searches and downloads collections from archive.org with IndexedDB support for storing and managing file metadata.",
+
+    "permissions": [
+        "tabs",
+        "storage",
+        "downloads",
+        "scripting"
+    ],
+
+    "host_permissions": [
+        "https://archive.org/*"
+    ],
+
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "web_accessible_resources": [
+      {
+        "resources": ["db.html"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+
+    "icons": {
+        "16": "icons/16.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+    },
+
+    "content_scripts": [
+        {
+          "matches": ["https://archive.org/details/*"],
+          "css": ["styles.css"],
+          "js": ["content.js"]
+        }
+    ]
+}
